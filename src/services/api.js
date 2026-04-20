@@ -1,6 +1,9 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api' })
+
+const api = axios.create({
+  baseURL: 'https://urban-growth-backend-3.onrender.com/api'
+})
 
 export const fetchKPIs = () => api.get('/analytics/kpis').then(r => r.data)
 export const fetchHeatmap = () => api.get('/heatmap').then(r => r.data)
